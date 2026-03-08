@@ -21,14 +21,16 @@ public partial class LoginForm : Form
         txtPassword.ForeColor = Color.White;
         txtUsername.BorderStyle = BorderStyle.None;
         txtPassword.BorderStyle = BorderStyle.None;
-        RoundTextBox(txtUsername, 12);
-        RoundTextBox(txtPassword, 12);
-        txtUsername.Resize += (_, _) => RoundTextBox(txtUsername, 12);
-        txtPassword.Resize += (_, _) => RoundTextBox(txtPassword, 12);
+        txtPassword.Multiline = false;
+        txtPassword.UseSystemPasswordChar = true;
+        RoundTextBox(txtUsername, 8);
+        RoundTextBox(txtPassword, 8);
+        txtUsername.Resize += (_, _) => RoundTextBox(txtUsername, 8);
+        txtPassword.Resize += (_, _) => RoundTextBox(txtPassword, 8);
 
         btnLogin.BackColor = ColorTranslator.FromHtml("#D9D9D9");
         btnLogin.ForeColor = Color.Black;
-        btnLogin.CornerRadius = 18;
+        btnLogin.CornerRadius = 10;
 
         LoadLogo();
     }

@@ -41,49 +41,61 @@ partial class LoginForm
         // label1
         // 
         label1.AutoSize = true;
-        label1.Location = new Point(948, 239);
+        label1.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+        label1.Location = new Point(551, 120);
+        label1.Margin = new Padding(2, 0, 2, 0);
         label1.Name = "label1";
-        label1.Size = new Size(106, 30);
+        label1.Size = new Size(74, 15);
         label1.TabIndex = 0;
         label1.Text = "Username";
         label1.Click += label1_Click;
         // 
         // txtUsername
         // 
-        txtUsername.Font = new Font("Segoe UI", 11F);
-        txtUsername.Location = new Point(878, 272);
+        txtUsername.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+        txtUsername.Location = new Point(512, 136);
+        txtUsername.Margin = new Padding(2);
         txtUsername.Multiline = true;
         txtUsername.Name = "txtUsername";
-        txtUsername.Size = new Size(260, 45);
+        txtUsername.Size = new Size(153, 24);
         txtUsername.TabIndex = 1;
         txtUsername.Tag = "";
         // 
         // label2
         // 
         label2.AutoSize = true;
-        label2.Location = new Point(955, 360);
+        label2.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+        label2.Location = new Point(553, 180);
+        label2.Margin = new Padding(2, 0, 2, 0);
         label2.Name = "label2";
-        label2.Size = new Size(99, 30);
+        label2.Size = new Size(71, 15);
         label2.TabIndex = 2;
         label2.Text = "Password";
         label2.Click += label2_Click;
         // 
         // txtPassword
         // 
-        txtPassword.Font = new Font("Segoe UI", 11F);
-        txtPassword.Location = new Point(878, 393);
+        txtPassword.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+        txtPassword.Location = new Point(512, 196);
+        txtPassword.Margin = new Padding(2);
         txtPassword.Multiline = true;
         txtPassword.Name = "txtPassword";
-        txtPassword.Size = new Size(260, 45);
+        txtPassword.PasswordChar = '*';
+        txtPassword.Size = new Size(153, 24);
         txtPassword.TabIndex = 3;
         txtPassword.UseSystemPasswordChar = true;
         txtPassword.TextChanged += txtPassword_TextChanged;
         // 
         // btnLogin
         // 
-        btnLogin.Location = new Point(939, 464);
+        btnLogin.BackColor = Color.FromArgb(217, 217, 217);
+        btnLogin.FlatStyle = FlatStyle.Flat;
+        btnLogin.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+        btnLogin.ForeColor = Color.Black;
+        btnLogin.Location = new Point(548, 232);
+        btnLogin.Margin = new Padding(2);
         btnLogin.Name = "btnLogin";
-        btnLogin.Size = new Size(131, 40);
+        btnLogin.Size = new Size(76, 20);
         btnLogin.TabIndex = 4;
         btnLogin.Text = "Login";
         btnLogin.UseVisualStyleBackColor = true;
@@ -92,9 +104,10 @@ partial class LoginForm
         // label3
         // 
         label3.Font = new Font("Arial Rounded MT Bold", 35F, FontStyle.Bold);
-        label3.Location = new Point(838, 93);
+        label3.Location = new Point(489, 46);
+        label3.Margin = new Padding(2, 0, 2, 0);
         label3.Name = "label3";
-        label3.Size = new Size(349, 120);
+        label3.Size = new Size(204, 60);
         label3.TabIndex = 5;
         label3.Text = "UGNAY";
         label3.Click += label3_Click;
@@ -102,9 +115,10 @@ partial class LoginForm
         // pictureBoxLogo
         // 
         pictureBoxLogo.BackColor = Color.Transparent;
-        pictureBoxLogo.Location = new Point(86, 93);
+        pictureBoxLogo.Location = new Point(50, 46);
+        pictureBoxLogo.Margin = new Padding(2);
         pictureBoxLogo.Name = "pictureBoxLogo";
-        pictureBoxLogo.Size = new Size(680, 540);
+        pictureBoxLogo.Size = new Size(397, 270);
         pictureBoxLogo.SizeMode = PictureBoxSizeMode.Zoom;
         pictureBoxLogo.TabIndex = 6;
         pictureBoxLogo.TabStop = false;
@@ -112,9 +126,9 @@ partial class LoginForm
         // LoginForm
         // 
         AcceptButton = btnLogin;
-        AutoScaleDimensions = new SizeF(12F, 30F);
+        AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
-        ClientSize = new Size(1243, 701);
+        ClientSize = new Size(725, 350);
         Controls.Add(pictureBoxLogo);
         Controls.Add(label3);
         Controls.Add(btnLogin);
@@ -122,6 +136,7 @@ partial class LoginForm
         Controls.Add(label2);
         Controls.Add(txtUsername);
         Controls.Add(label1);
+        Margin = new Padding(2);
         Name = "LoginForm";
         Text = "UGNAY Login";
         Load += LoginForm_Load;

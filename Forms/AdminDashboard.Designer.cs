@@ -60,181 +60,221 @@ namespace UgnayDesktop.Forms
             // labelTeachers
             // 
             labelTeachers.AutoSize = true;
-            labelTeachers.Location = new Point(12, 62);
+            labelTeachers.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelTeachers.Location = new Point(7, 31);
+            labelTeachers.Margin = new Padding(2, 0, 2, 0);
             labelTeachers.Name = "labelTeachers";
-            labelTeachers.Size = new Size(93, 30);
+            labelTeachers.Size = new Size(68, 15);
             labelTeachers.TabIndex = 0;
             labelTeachers.Text = "Teachers";
             // 
             // dgvTeachers
             // 
             dgvTeachers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTeachers.Location = new Point(12, 95);
+            dgvTeachers.Location = new Point(7, 48);
+            dgvTeachers.Margin = new Padding(2);
             dgvTeachers.Name = "dgvTeachers";
             dgvTeachers.RowHeadersWidth = 72;
-            dgvTeachers.Size = new Size(520, 220);
+            dgvTeachers.Size = new Size(303, 110);
             dgvTeachers.TabIndex = 1;
             dgvTeachers.SelectionChanged += dgvTeachers_SelectionChanged;
             // 
             // labelStudents
             // 
             labelStudents.AutoSize = true;
-            labelStudents.Location = new Point(556, 62);
+            labelStudents.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelStudents.Location = new Point(324, 31);
+            labelStudents.Margin = new Padding(2, 0, 2, 0);
             labelStudents.Name = "labelStudents";
-            labelStudents.Size = new Size(93, 30);
+            labelStudents.Size = new Size(65, 15);
             labelStudents.TabIndex = 2;
             labelStudents.Text = "Students";
             // 
             // dgvStudents
             // 
             dgvStudents.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvStudents.Location = new Point(556, 95);
+            dgvStudents.Location = new Point(324, 48);
+            dgvStudents.Margin = new Padding(2);
             dgvStudents.Name = "dgvStudents";
             dgvStudents.RowHeadersWidth = 72;
-            dgvStudents.Size = new Size(520, 220);
+            dgvStudents.Size = new Size(303, 110);
             dgvStudents.TabIndex = 3;
             dgvStudents.SelectionChanged += dgvStudents_SelectionChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(12, 338);
+            label1.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(4, 170);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(107, 30);
+            label1.Size = new Size(72, 15);
             label1.TabIndex = 4;
             label1.Text = "Full Name";
             // 
             // txtFullName
             // 
-            txtFullName.Location = new Point(12, 371);
+            txtFullName.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtFullName.Location = new Point(7, 186);
+            txtFullName.Margin = new Padding(2);
             txtFullName.Name = "txtFullName";
-            txtFullName.Size = new Size(268, 35);
+            txtFullName.Size = new Size(158, 23);
             txtFullName.TabIndex = 5;
             // 
             // txtNewUsername
             // 
-            txtNewUsername.Location = new Point(12, 448);
+            txtNewUsername.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtNewUsername.Location = new Point(7, 224);
+            txtNewUsername.Margin = new Padding(2);
             txtNewUsername.Name = "txtNewUsername";
-            txtNewUsername.Size = new Size(268, 35);
+            txtNewUsername.Size = new Size(158, 23);
             txtNewUsername.TabIndex = 7;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(12, 415);
+            label2.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(4, 209);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(106, 30);
+            label2.Size = new Size(74, 15);
             label2.TabIndex = 6;
             label2.Text = "Username";
             // 
             // txtNewPassword
             // 
-            txtNewPassword.Location = new Point(12, 529);
+            txtNewPassword.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtNewPassword.Location = new Point(7, 264);
+            txtNewPassword.Margin = new Padding(2);
             txtNewPassword.Name = "txtNewPassword";
-            txtNewPassword.Size = new Size(268, 35);
+            txtNewPassword.Size = new Size(158, 23);
             txtNewPassword.TabIndex = 9;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(12, 496);
+            label3.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(4, 249);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(193, 30);
+            label3.Size = new Size(137, 15);
             label3.TabIndex = 8;
             label3.Text = "Password (optional)";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(12, 576);
+            label4.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(4, 289);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(53, 30);
+            label4.Size = new Size(36, 15);
             label4.TabIndex = 10;
             label4.Text = "Role";
             // 
             // cmbRole
             // 
             cmbRole.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbRole.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cmbRole.FormattingEnabled = true;
             cmbRole.Items.AddRange(new object[] { "Admin", "Teacher", "Student" });
-            cmbRole.Location = new Point(12, 609);
+            cmbRole.Location = new Point(7, 304);
+            cmbRole.Margin = new Padding(2);
             cmbRole.Name = "cmbRole";
-            cmbRole.Size = new Size(268, 38);
+            cmbRole.Size = new Size(158, 23);
             cmbRole.TabIndex = 11;
             cmbRole.SelectedIndexChanged += cmbRole_SelectedIndexChanged;
             // 
             // lblTeacherPhone
             // 
             lblTeacherPhone.AutoSize = true;
-            lblTeacherPhone.Location = new Point(12, 650);
+            lblTeacherPhone.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTeacherPhone.Location = new Point(4, 326);
+            lblTeacherPhone.Margin = new Padding(2, 0, 2, 0);
             lblTeacherPhone.Name = "lblTeacherPhone";
-            lblTeacherPhone.Size = new Size(156, 30);
+            lblTeacherPhone.Size = new Size(105, 15);
             lblTeacherPhone.TabIndex = 12;
             lblTeacherPhone.Text = "Teacher Phone";
             // 
             // txtTeacherPhone
             // 
-            txtTeacherPhone.Location = new Point(12, 683);
+            txtTeacherPhone.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtTeacherPhone.Location = new Point(7, 342);
+            txtTeacherPhone.Margin = new Padding(2);
             txtTeacherPhone.Name = "txtTeacherPhone";
-            txtTeacherPhone.Size = new Size(268, 35);
+            txtTeacherPhone.Size = new Size(158, 23);
             txtTeacherPhone.TabIndex = 13;
             // 
             // lblStudentAge
             // 
             lblStudentAge.AutoSize = true;
-            lblStudentAge.Location = new Point(12, 721);
+            lblStudentAge.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblStudentAge.Location = new Point(4, 361);
+            lblStudentAge.Margin = new Padding(2, 0, 2, 0);
             lblStudentAge.Name = "lblStudentAge";
-            lblStudentAge.Size = new Size(127, 30);
+            lblStudentAge.Size = new Size(79, 14);
             lblStudentAge.TabIndex = 14;
             lblStudentAge.Text = "Student Age";
             // 
             // txtStudentAge
             // 
-            txtStudentAge.Location = new Point(12, 754);
+            txtStudentAge.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtStudentAge.Location = new Point(7, 377);
+            txtStudentAge.Margin = new Padding(2);
             txtStudentAge.Name = "txtStudentAge";
-            txtStudentAge.Size = new Size(126, 35);
+            txtStudentAge.Size = new Size(75, 23);
             txtStudentAge.TabIndex = 15;
             // 
             // lblStudentSex
             // 
             lblStudentSex.AutoSize = true;
-            lblStudentSex.Location = new Point(149, 721);
+            lblStudentSex.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblStudentSex.Location = new Point(84, 361);
+            lblStudentSex.Margin = new Padding(2, 0, 2, 0);
             lblStudentSex.Name = "lblStudentSex";
-            lblStudentSex.Size = new Size(122, 30);
+            lblStudentSex.Size = new Size(76, 14);
             lblStudentSex.TabIndex = 16;
             lblStudentSex.Text = "Student Sex";
             // 
             // cmbStudentSex
             // 
             cmbStudentSex.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbStudentSex.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cmbStudentSex.FormattingEnabled = true;
             cmbStudentSex.Items.AddRange(new object[] { "Male", "Female" });
-            cmbStudentSex.Location = new Point(149, 754);
+            cmbStudentSex.Location = new Point(87, 377);
+            cmbStudentSex.Margin = new Padding(2);
             cmbStudentSex.Name = "cmbStudentSex";
-            cmbStudentSex.Size = new Size(131, 38);
+            cmbStudentSex.Size = new Size(78, 23);
             cmbStudentSex.TabIndex = 17;
             // 
             // lblStudentDeviceId
             // 
             lblStudentDeviceId.AutoSize = true;
-            lblStudentDeviceId.Location = new Point(12, 795);
+            lblStudentDeviceId.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblStudentDeviceId.Location = new Point(5, 399);
+            lblStudentDeviceId.Margin = new Padding(2, 0, 2, 0);
             lblStudentDeviceId.Name = "lblStudentDeviceId";
-            lblStudentDeviceId.Size = new Size(179, 30);
+            lblStudentDeviceId.Size = new Size(111, 14);
             lblStudentDeviceId.TabIndex = 18;
             lblStudentDeviceId.Text = "Student Device ID";
             // 
             // txtStudentDeviceId
             // 
-            txtStudentDeviceId.Location = new Point(12, 828);
+            txtStudentDeviceId.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtStudentDeviceId.Location = new Point(7, 414);
+            txtStudentDeviceId.Margin = new Padding(2);
             txtStudentDeviceId.Name = "txtStudentDeviceId";
-            txtStudentDeviceId.Size = new Size(268, 35);
+            txtStudentDeviceId.Size = new Size(158, 23);
             txtStudentDeviceId.TabIndex = 19;
             // 
             // btnAddUser
             // 
-            btnAddUser.Location = new Point(12, 868);
+            btnAddUser.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAddUser.Location = new Point(7, 434);
+            btnAddUser.Margin = new Padding(2);
             btnAddUser.Name = "btnAddUser";
-            btnAddUser.Size = new Size(131, 40);
+            btnAddUser.Size = new Size(76, 20);
             btnAddUser.TabIndex = 20;
             btnAddUser.Text = "Add User";
             btnAddUser.UseVisualStyleBackColor = true;
@@ -242,9 +282,11 @@ namespace UgnayDesktop.Forms
             // 
             // btnUpdateUser
             // 
-            btnUpdateUser.Location = new Point(149, 868);
+            btnUpdateUser.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnUpdateUser.Location = new Point(87, 434);
+            btnUpdateUser.Margin = new Padding(2);
             btnUpdateUser.Name = "btnUpdateUser";
-            btnUpdateUser.Size = new Size(131, 40);
+            btnUpdateUser.Size = new Size(76, 20);
             btnUpdateUser.TabIndex = 21;
             btnUpdateUser.Text = "Update";
             btnUpdateUser.UseVisualStyleBackColor = true;
@@ -252,9 +294,11 @@ namespace UgnayDesktop.Forms
             // 
             // btnDeleteUser
             // 
-            btnDeleteUser.Location = new Point(149, 914);
+            btnDeleteUser.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDeleteUser.Location = new Point(87, 457);
+            btnDeleteUser.Margin = new Padding(2);
             btnDeleteUser.Name = "btnDeleteUser";
-            btnDeleteUser.Size = new Size(131, 40);
+            btnDeleteUser.Size = new Size(76, 20);
             btnDeleteUser.TabIndex = 22;
             btnDeleteUser.Text = "Delete User";
             btnDeleteUser.UseVisualStyleBackColor = true;
@@ -263,17 +307,22 @@ namespace UgnayDesktop.Forms
             // lblSelectedUser
             // 
             lblSelectedUser.AutoSize = true;
-            lblSelectedUser.Location = new Point(12, 914);
+            lblSelectedUser.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblSelectedUser.Location = new Point(2, 460);
+            lblSelectedUser.Margin = new Padding(2, 0, 2, 0);
             lblSelectedUser.Name = "lblSelectedUser";
-            lblSelectedUser.Size = new Size(136, 30);
+            lblSelectedUser.Size = new Size(87, 14);
             lblSelectedUser.TabIndex = 23;
             lblSelectedUser.Text = "Selected user";
+            lblSelectedUser.Click += lblSelectedUser_Click;
             // 
             // btnLogout
             // 
-            btnLogout.Location = new Point(945, 12);
+            btnLogout.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogout.Location = new Point(551, 6);
+            btnLogout.Margin = new Padding(2);
             btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(131, 40);
+            btnLogout.Size = new Size(76, 20);
             btnLogout.TabIndex = 24;
             btnLogout.Text = "Logout";
             btnLogout.UseVisualStyleBackColor = true;
@@ -281,9 +330,11 @@ namespace UgnayDesktop.Forms
             // 
             // btnMqttTest
             // 
-            btnMqttTest.Location = new Point(339, 969);
+            btnMqttTest.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnMqttTest.Location = new Point(198, 484);
+            btnMqttTest.Margin = new Padding(2);
             btnMqttTest.Name = "btnMqttTest";
-            btnMqttTest.Size = new Size(131, 40);
+            btnMqttTest.Size = new Size(76, 20);
             btnMqttTest.TabIndex = 25;
             btnMqttTest.Text = "MQTT Test";
             btnMqttTest.UseVisualStyleBackColor = true;
@@ -292,26 +343,29 @@ namespace UgnayDesktop.Forms
             // dgvSensorReadings
             // 
             dgvSensorReadings.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvSensorReadings.Location = new Point(339, 338);
+            dgvSensorReadings.Location = new Point(198, 169);
+            dgvSensorReadings.Margin = new Padding(2);
             dgvSensorReadings.Name = "dgvSensorReadings";
             dgvSensorReadings.RowHeadersWidth = 72;
-            dgvSensorReadings.Size = new Size(737, 595);
+            dgvSensorReadings.Size = new Size(430, 298);
             dgvSensorReadings.TabIndex = 26;
             // 
             // lblDecisionStatus
             // 
             lblDecisionStatus.AutoSize = true;
-            lblDecisionStatus.Location = new Point(339, 936);
+            lblDecisionStatus.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDecisionStatus.Location = new Point(198, 468);
+            lblDecisionStatus.Margin = new Padding(2, 0, 2, 0);
             lblDecisionStatus.Name = "lblDecisionStatus";
-            lblDecisionStatus.Size = new Size(92, 30);
+            lblDecisionStatus.Size = new Size(64, 15);
             lblDecisionStatus.TabIndex = 27;
             lblDecisionStatus.Text = "Decision";
             // 
             // AdminDashboard
             // 
-            AutoScaleDimensions = new SizeF(12F, 30F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1088, 1024);
+            ClientSize = new Size(844, 551);
             Controls.Add(lblDecisionStatus);
             Controls.Add(dgvSensorReadings);
             Controls.Add(btnMqttTest);
@@ -340,8 +394,10 @@ namespace UgnayDesktop.Forms
             Controls.Add(labelStudents);
             Controls.Add(dgvTeachers);
             Controls.Add(labelTeachers);
+            Margin = new Padding(2);
             Name = "AdminDashboard";
             Text = "Admin Dashboard";
+            Load += AdminDashboard_Load;
             ((System.ComponentModel.ISupportInitialize)dgvTeachers).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvStudents).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvSensorReadings).EndInit();

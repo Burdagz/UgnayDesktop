@@ -4,6 +4,7 @@ using UgnayDesktop.Services;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Text.Json;
 using System.Windows.Forms;
 using BCrypt.Net;
@@ -20,6 +21,8 @@ namespace UgnayDesktop.Forms
         {
             InitializeComponent();
             _currentUser = currentUser;
+            ApplyTheme();
+
             _mqttService.MessageReceived += MqttService_MessageReceived;
             LoadUsers();
             LoadSensorReadings();
@@ -545,6 +548,103 @@ namespace UgnayDesktop.Forms
                 await _mqttService.DisconnectAsync();
                 Close();
             }
+        }
+
+        private void ApplyTheme()
+        {
+            StartPosition = FormStartPosition.CenterScreen;
+            BackColor = ColorTranslator.FromHtml("#CABA9C");
+
+            ApplyThemeToControls(this);
+
+            txtNewPassword.Multiline = false;
+            txtNewPassword.UseSystemPasswordChar = true;
+        }
+
+        private void ApplyThemeToControls(Control parent)
+        {
+            var dark = ColorTranslator.FromHtml("#545454");
+            var lightButton = ColorTranslator.FromHtml("#D9D9D9");
+
+            foreach (Control control in parent.Controls)
+            {
+                if (control is Label label)
+                {
+                    label.ForeColor = dark;
+                    label.BackColor = Color.Transparent;
+                }
+                else if (control is TextBox textBox)
+                {
+                    textBox.BackColor = dark;
+                    textBox.ForeColor = Color.White;
+                    textBox.BorderStyle = BorderStyle.None;
+                    RoundTextBox(textBox, 4);
+                    textBox.Resize += (_, _) => RoundTextBox(textBox, 4);
+                }
+                else if (control is ComboBox comboBox)
+                {
+                    comboBox.BackColor = dark;
+                    comboBox.ForeColor = Color.White;
+                    comboBox.FlatStyle = FlatStyle.Flat;
+                }
+                else if (control is Button button)
+                {
+                    button.BackColor = lightButton;
+                    button.ForeColor = Color.Black;
+                    button.FlatStyle = FlatStyle.Flat;
+                    button.FlatAppearance.BorderSize = 0;
+                }
+                else if (control is DataGridView grid)
+                {
+                    grid.BackgroundColor = ColorTranslator.FromHtml("#D9D9D9");
+                    grid.BorderStyle = BorderStyle.None;
+                    grid.EnableHeadersVisualStyles = false;
+                    grid.ColumnHeadersDefaultCellStyle.BackColor = dark;
+                    grid.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+                    grid.DefaultCellStyle.BackColor = Color.White;
+                    grid.DefaultCellStyle.ForeColor = Color.Black;
+                    grid.RowHeadersVisible = false;
+                    grid.GridColor = ColorTranslator.FromHtml("#CABA9C");
+                }
+                else if (control is GroupBox groupBox)
+                {
+                    groupBox.ForeColor = dark;
+                }
+                else if (control is Panel panel)
+                {
+                    panel.BackColor = Color.Transparent;
+                }
+
+                if (control.HasChildren)
+                {
+                    ApplyThemeToControls(control);
+                }
+            }
+        }
+
+        private static void RoundTextBox(TextBox textBox, int radius)
+        {
+            var path = new GraphicsPath();
+            int diameter = radius * 2;
+
+            path.AddArc(0, 0, diameter, diameter, 180, 90);
+            path.AddArc(textBox.Width - diameter, 0, diameter, diameter, 270, 90);
+            path.AddArc(textBox.Width - diameter, textBox.Height - diameter, diameter, diameter, 0, 90);
+            path.AddArc(0, textBox.Height - diameter, diameter, diameter, 90, 90);
+            path.CloseFigure();
+
+            textBox.Region?.Dispose();
+            textBox.Region = new Region(path);
+        }
+
+        private void AdminDashboard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblSelectedUser_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
